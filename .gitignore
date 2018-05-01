@@ -20,7 +20,6 @@ db/*.sqlite3
 /db/*.sqlite3-journal
 /log/*
 /tmp/*
-Gemfile.lock
 # various artifacts
 **.war
 *.rbc
@@ -30,7 +29,6 @@ Gemfile.lock
 /app/assets/javascripts/guard_javascript/*
 /app/assets/stylesheets/frontend/native_stylesheets/guard_stylesheets/*
 /config/application.yml
-/config/secrets.yml
 /config/secrets.yml.example
 /coverage.data
 /coverage/
