@@ -1,5 +1,5 @@
 # ApplicationMailer
-class ApplicationMailer < ActionMailer
+class ApplicationMailer < ActionMailer::Base
   default from: 'testing@keppler.com'
   layout 'mailers/mailer'
 
@@ -21,7 +21,6 @@ class ApplicationMailer < ActionMailer
         user_name: setting.email,
         password: setting.password
       )
-
       ApplicationMailer.default_url_options.merge!(host: setting.domain_name)
     end
   end
