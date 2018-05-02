@@ -21,6 +21,12 @@ menu:
           name: 'Title & Metas'
           url_path: /admin/meta_tags
           current: ['admin/meta_tags']
+  download:
+    name: downloads
+    url_path: /admin/downloads
+    icon: layers
+    current: ['admin/downloads']
+    model: Download
   user:
     name: users
     url_path: /admin/users
