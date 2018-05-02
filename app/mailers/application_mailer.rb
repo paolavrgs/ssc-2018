@@ -3,7 +3,7 @@ class ApplicationMailer < ActionMailer::Base
   default from: 'testing@keppler.com'
   layout 'mailers/mailer'
 
-  after_filter :set_smtp
+  after_action :set_smtp
 
   def testing
     mail to: 'example@keppler.com', subject: 'Keppler email'
