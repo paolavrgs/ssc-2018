@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   localized do
+    get '/contact', to: 'app/front#contact', as: :app_contact
   end
 
   root to: 'app/front#index'
@@ -8,12 +9,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'admin#root'
- 
+
     resources :downloads do
       get '(page/:page)', action: :index, on: :collection, as: ''
       get '/clone', action: 'clone'
       post '/import', action: 'import', as: :import
-    
+
       get '/download', action: 'download', as: :download
       post(
         '/sort',

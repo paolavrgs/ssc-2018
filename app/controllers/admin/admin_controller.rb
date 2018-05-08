@@ -10,7 +10,7 @@ module Admin
 
     def root
       if current_user
-        redirect_to dashboard_path
+        redirect_to admin_downloads_path
       else
         redirect_to new_user_session_path
       end

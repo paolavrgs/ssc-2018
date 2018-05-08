@@ -1,0 +1,25 @@
+/ Header
+%header
+	.top-bar_sub_w3layouts.container-fluid
+		.row
+			.col-md-4.logo.text-left
+				%a.navbar-brand{:href => "/"}
+					%img{:alt => "", :src => "/assets/img/logo.png"}/
+					Consejo Comunal Bicentenario
+				/ <span>Urb. Las Margaritas - Sector 1</span>
+	#home.header_top
+		%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+			%button.navbar-toggler.navbar-toggler-right.mx-auto{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+				%span.navbar-toggler-icon
+			#navbarSupportedContent.collapse.navbar-collapse
+				%ul.navbar-nav.mr-auto
+					%li.nav-item.active
+						%a.nav-link{:href => "#"}
+							Inicio
+							%span.sr-only (current)
+					%li.nav-item
+						%a.nav-link{:href => "about.html"} Quiénes somos
+					%li.nav-item
+						%a.nav-link{:href => "contact.html"} Censo de Habitantes
+					%li.nav-item
+						%a.nav-link{:href => "/es/contact"} Buzón de Quejas y Sugerencias

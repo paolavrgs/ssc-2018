@@ -15,10 +15,10 @@
       = link_to admin_download_path(download, search: @query), remote: true, class: 'show-row' do
         %span
           = download.title
-    %td.hidden-xs.hidden-sm
-      = link_to admin_download_path(download, search: @query), remote: true, class: 'show-row' do
-        %span
-          = download.position
+    -# %td.hidden-xs.hidden-sm
+    -#   = link_to admin_download_path(download, search: @query), remote: true, class: 'show-row' do
+    -#     %span
+    -#       = download.position
     %td{ style: 'width: 15px;padding-right:15px;' }
       %a.action-btn.pull-right{:id => "menu-#{download.id}", "aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
         %i.icon-options-vertical
