@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   localized do
     get '/contact', to: 'app/front#contact', as: :app_contact
+    get '/thanks', to: 'app/front#thanks', as: :app_thanks
+    get '/censo', to: 'app/front#censo', as: :app_censo
   end
 
   root to: 'app/front#index'
@@ -9,6 +11,29 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'admin#root'
+
+    resources :messages do
+      get '(page/:page)', action: :index, on: :collection, as: ''
+      post '/import', action: 'import', as: :import
+
+      get '/download', action: 'download', as: :download
+      post(
+        '/sort',
+        action: :sort,
+        on: :collection,
+      )
+      get(
+        '/reload',
+        action: :reload,
+        on: :collection,
+      )
+      delete(
+        '/destroy_multiple',
+        action: :destroy_multiple,
+        on: :collection,
+        as: :destroy_multiple
+      )
+    end
 
     resources :downloads do
       get '(page/:page)', action: :index, on: :collection, as: ''

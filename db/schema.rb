@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_02_155145) do
+ActiveRecord::Schema.define(version: 2018_05_10_034621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,27 @@ ActiveRecord::Schema.define(version: 2018_05_02_155145) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "censos", force: :cascade do |t|
+    t.string "calle"
+    t.string "casa"
+    t.integer "status_vivienda"
+    t.integer "tipo_vivienda"
+    t.integer "condicion_v"
+    t.integer "piso"
+    t.string "name"
+    t.string "dni"
+    t.date "birthdate"
+    t.string "age"
+    t.integer "gender"
+    t.string "phone"
+    t.boolean "job"
+    t.string "job_place"
+    t.boolean "student"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "position"
+  end
+
   create_table "customizes", force: :cascade do |t|
     t.string "file"
     t.boolean "installed"
@@ -65,6 +86,17 @@ ActiveRecord::Schema.define(version: 2018_05_02_155145) do
     t.integer "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "name"
+    t.integer "dni"
+    t.text "address"
+    t.string "subject"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "position"
   end
 
   create_table "meta_tags", force: :cascade do |t|

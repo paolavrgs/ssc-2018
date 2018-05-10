@@ -5,6 +5,7 @@ es:
     navigation:
       last_session: Ultima sesión
     sidebar-menu:
+      messages: Buzón (Quejas y Sugerencias)
       downloads: Descargas
       customizes: Personalización
       dashboard: Tablero
@@ -39,6 +40,7 @@ es:
         categories: Categorías
     models:
       singularize:
+        message: message
         download: download
         customize: customize
         meta_tag: meta tag
@@ -47,6 +49,7 @@ es:
         configuration: configuración
         user: usuario
       pluralize:
+        messages: messages
         downloads: downloads
         customizes: customizes
         meta_tags: meta tags
@@ -56,6 +59,7 @@ es:
         user: usuarios
         script: scripts
     modules:
+      admin/messages: Messages
       admin/downloads: Descargas de Documentos
       admin/customizes: Customizes
       admin/meta_tags: 'Meta tags'
@@ -181,7 +185,9 @@ es:
       long_description: 'Descripción Larga'
       details: Detalles
       message: Mensaje
-      content: Contenido
+      subject: Asunto
+      dni: Cédula de Identidad
+      content: Contenido del Mensaje
       date: Fecha
       date_begin: 'Fecha Inicial'
       date_end: 'Fecha Final'
@@ -195,7 +201,7 @@ es:
       updated_at: Ultima actualización
       password: Contraseña
       password_confirmation: Confirmar contraseña
-      address: Dirección del servidor
+      address: Dirección
       port: Puerto
       domain_name: Dominio
       url: Url

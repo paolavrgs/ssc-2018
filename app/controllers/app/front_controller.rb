@@ -8,6 +8,14 @@ module App
     end
 
     def contact
+      @message = Message.new
+    end
+
+    def thanks
+    end
+
+    def censo
+      @censos = Censo.new
     end
   end
 end

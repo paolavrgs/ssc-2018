@@ -109,6 +109,12 @@ group :development, :test do
   gem 'scss_lint', '~> 0.57.0', require: false
 end
 
+# recaptcha
+gem 'recaptcha', require: "recaptcha/rails"
+
+#contact_us keppler
+gem 'keppler_contact_us', path: 'plugins/keppler_contact_us'
+
 #---- keppler_ga_dashboard ----
 gem 'google-api-client', '~> 0.7.1'
 gem 'keppler_ga_dashboard', path: 'plugins/keppler_ga_dashboard'

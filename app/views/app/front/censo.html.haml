@@ -12,67 +12,38 @@
       }
   %body
     = render 'app/partials/navbar'
-    -# .banner-inner
-    -# %ol.breadcrumb
-    -#   %li.breadcrumb-item
-    -#     %a{:href => "index.html"} Home
-    -#   %li.breadcrumb-item.active Contact
     %section.main-content-w3layouts-agileits
-      %h3.tittle Buzón de Quejas y Sugerencias
-      -# %p.sub.text-center We love to discuss your idea
-      -# .contact-map.inner-sec
-      -#   %iframe.map{:allowfullscreen => "", :src => "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3907.305301490767!2d-70.18821967947264!3d11.672761960790343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sve!4v1525105034240", :style => "border:0"}
-      -# .ad-inf-sec.bg-light
-      -#   .container
-      -#     .address.row
-      -#       .col-lg-4.address-grid
-      -#         .row.address-info
-      -#           .col-md-4.address-left.text-center
-      -#             %i.far.fa-map
-      -#           .col-md-8.address-right.text-left
-      -#             %h6 Dirección
-      -#             %p
-      -#               California, USA
-      -#       .col-lg-4.address-grid
-      -#         .row.address-info
-      -#           .col-md-4.address-left.text-center
-      -#             %i.far.fa-envelope
-      -#           .col-md-8.address-right.text-left
-      -#             %h6 Email
-      -#             %p
-      -#               Email :
-      -#               %a{:href => "mailto:example@email.com"} mail@example.com
-      -#       .col-lg-4.address-grid
-      -#         .row.address-info
-      -#           .col-md-4.address-left.text-center
-      -#             %i.fa.fa-mobile-alt
-      -#           .col-md-8.address-right.text-left
-      -#             %h6 Phone
-      -#             %p +1 234 567 8901
+      %h3.tittle Censo de Habitantes
       .container
         .contact_grid_right
-          = simple_form_for @message, :url => "/admin/messages", :method => :post do |f|
+          = simple_form_for @censos, :url => "/admin/censos", :method => :post do |f|
             .row.contact_left_grid
               .col-md-6.con-left
                 .form-group
-                  %label Nombre y Apellido
-                  = f.input :name, label: false,  input_html: {class:"form-control"}
+                  %label Calle
+                  = f.input :calle, label: false,  input_html: {class:"form-control"}
                 .form-group
-                  %label Cédula de Identidad
-                  = f.input :dni,  label: false, input_html: { :type=>"text", class:"form-control"}
+                  %label Nº de Casa
+                  = f.input :casa,  label: false, input_html: { :type=>"text", class:"form-control"}
                 .form-group
-                  %label Dirección
-                  = f.input :address, as: :text, label: false, input_html: {class: "form-control"}
-                -# = raw recaptcha_tags :display => { :theme => 'custom'}
-              .col-md-6.con-right
+                  %label Estatus de la vivienda
+                  = f.input :status_vivienda, as: :text, label: false, input_html: {class: "form-control"}
                 .form-group
-                  %label Asunto
-                  = f.input :subject,  label: false, input_html: {class:"form-control"}
+                  %label Condición de la vivienda
+                  = f.input :condicion_v, as: :text, label: false, input_html: {class: "form-control"}
                 .form-group
-                  %label Mensaje
-                  = f.input :content, as: :text, label: false, input_html: {id: "textarea"}
+                  %label Piso
+                  = f.input :piso, as: :text, label: false, input_html: {class: "form-control"}
+                = f.button :submit, t('keppler.actions.send'), class:"form-control"
+              -# .col-md-6.con-right
+              -#   .form-group
+              -#     %label Asunto
+              -#     = f.input :subject,  label: false, input_html: {class:"form-control"}
+              -#   .form-group
+              -#     %label Mensaje
+              -#     = f.input :content, as: :text, label: false, input_html: {id: "textarea"}
 
-                  = f.button :submit, t('keppler.actions.send'), class:"form-control"
+
 
               -#     %label{:for => "validationCustom01 my-2"} Nombre y Apellido
               -#     %input.form-control{:name => "Name", :placeholder => "", :required => "", :type => "text"}/

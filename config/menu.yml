@@ -27,6 +27,12 @@ menu:
     icon: cloud-download
     current: ['admin/downloads']
     model: Download
+  # censo:
+  #   name: censo
+  #   url_path: /admin/censos
+  #   icon: people
+  #   current: ['admin/censos']
+  #   model: Censo
   # user:
   #   name: users
   #   url_path: /admin/users

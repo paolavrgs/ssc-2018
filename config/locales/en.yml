@@ -2,6 +2,7 @@ en:
   keppler:
     login_message: Sign in to start your session
     sidebar-menu:
+      messages: Messages
       downloads: Downloads
       customizes: Customizes
       dashboard: Dashboard
@@ -27,6 +28,7 @@ en:
         categories: Categories
     models:
       singularize:
+        message: message
         download: download
         customize: customize
         meta_tag: meta tag
@@ -35,6 +37,7 @@ en:
         configuration: configuration
         user: user
       pluralize:
+        messages: messages
         downloads: downloads
         customizes: customizes
         meta_tags: meta tags
@@ -43,6 +46,7 @@ en:
         configurations: configurations
         user: users
     modules:
+      admin/messages: Messages
       admin/downloads: Downloads
       admin/customizes: Customizes
       admin/meta_tags: 'Meta tags'
