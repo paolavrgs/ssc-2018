@@ -16,9 +16,38 @@
       %h3.tittle Censo de Habitantes
       .container
         .contact_grid_right
-          = simple_form_for @censos, :url => "/admin/censos", :method => :post do |f|
+          = simple_form_for @censos, :url => "/admin/census", :method => :post do |f|
             .row.contact_left_grid
               .col-md-6.con-left
+                .form-group
+                  %label ¿Es usted jefe de familia?
+                  = f.input_field :jefe_familia, as: :boolean, label: false,  input_html: {class:"form-control"}
+                .form-group
+                  %label Nombre
+                  = f.input :name, label: false,  input_html: {class:"form-control"}
+                .form-group
+                  %label Apellido
+                  = f.input :last_name,  label: false, input_html: { :type=>"text", class:"form-control"}
+                .form-group
+                  %label Cédula de Identidad
+                  %input.form-control
+                  -# = f.input :status_vivienda, as: :text, label: false, input_html: {class: "form-control"}
+                .form-group
+                  %label Fecha de Nacimiento
+                  = f.input :birthdate, as: :date, label: false, input_html: {class: "form-control"}
+                .form-group
+                  %label Edad
+                  = f.input :edad, as: :integer, label: false, input_html: {class: "form-control", min: 0}
+                .form-group
+                  %label Nivel de Estudio
+                  = f.input :nivel_estudio, label: false, input_html: {class: "form-control"}
+                .form-group
+                  %label Profesión
+                  = f.input :profesion, label: false, input_html: {class: "form-control"}
+              .col-md-6.con-left
+                .form-group
+                  %label Sector
+                  = f.input :sector, label: false, input_html: {class: "form-control"}
                 .form-group
                   %label Calle
                   = f.input :calle, label: false,  input_html: {class:"form-control"}
@@ -26,14 +55,9 @@
                   %label Nº de Casa
                   = f.input :casa,  label: false, input_html: { :type=>"text", class:"form-control"}
                 .form-group
-                  %label Estatus de la vivienda
-                  = f.input :status_vivienda, as: :text, label: false, input_html: {class: "form-control"}
-                .form-group
-                  %label Condición de la vivienda
-                  = f.input :condicion_v, as: :text, label: false, input_html: {class: "form-control"}
-                .form-group
                   %label Piso
-                  = f.input :piso, as: :text, label: false, input_html: {class: "form-control"}
+                  = f.input :piso, label: false, input_html: {class: "form-control"}
+              .col-md-2
                 = f.button :submit, t('keppler.actions.send'), class:"form-control"
               -# .col-md-6.con-right
               -#   .form-group

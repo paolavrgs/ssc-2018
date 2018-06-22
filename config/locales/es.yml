@@ -5,6 +5,7 @@ es:
     navigation:
       last_session: Ultima sesión
     sidebar-menu:
+      census: Census
       messages: Buzón (Quejas y Sugerencias)
       downloads: Descargas
       customizes: Personalización
@@ -40,6 +41,7 @@ es:
         categories: Categorías
     models:
       singularize:
+        censu: censu
         message: message
         download: download
         customize: customize
@@ -49,6 +51,7 @@ es:
         configuration: configuración
         user: usuario
       pluralize:
+        census: census
         messages: messages
         downloads: downloads
         customizes: customizes
@@ -59,6 +62,7 @@ es:
         user: usuarios
         script: scripts
     modules:
+      admin/census: Census
       admin/messages: Messages
       admin/downloads: Descargas de Documentos
       admin/customizes: Customizes

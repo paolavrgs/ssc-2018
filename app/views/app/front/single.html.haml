@@ -1,0 +1,343 @@
+!!!
+/
+  Author: W3layouts
+  Author URL: http://w3layouts.com
+  License: Creative Commons Attribution 3.0 Unported
+  License URL: http://creativecommons.org/licenses/by/3.0/
+%html{:lang => "zxx"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Weblog a Blogging Category Bootstrap responsive WebTemplate | Single :: w3layouts
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "Weblog a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,\nSmartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design", :name => "keywords"}/
+    :javascript
+      addEventListener("load", function () {
+      	setTimeout(hideURLbar, 0);
+      }, false);
+
+      function hideURLbar() {
+      	window.scrollTo(0, 1);
+      }
+    %link{:href => "assets/css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/single.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/css/fontawesome-all.css", :rel => "stylesheet"}/
+    %link{:href => "//fonts.googleapis.comassets/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800", :rel => "stylesheet"}/
+  %body
+    / Header
+    %header
+      .top-bar_sub_w3layouts.container-fluid
+        .row
+          .col-md-4.logo.text-left
+            %a.navbar-brand{:href => "index.html"}
+              %i.fab.fa-linode
+              Weblog
+          .col-md-4.top-forms.text-center.mt-lg-3.mt-md-1.mt-0
+            %span Welcome Back!
+            %span.mx-lg-4.mx-md-2.mx-1
+              %a{:href => "login.html"}
+                %i.fa.fa-lock
+                Sign In
+            %span
+              %a{:href => "register.html"}
+                %i.far.fa-user
+                Register
+          .col-md-4.log-icons.text-right
+            %ul.social_list1.mt-3
+              %li
+                %a.facebook1.mx-2{:href => "#"}
+                  %i.fab.fa-facebook-f
+              %li
+                %a.twitter2{:href => "#"}
+                  %i.fab.fa-twitter
+              %li
+                %a.dribble3.mx-2{:href => "#"}
+                  %i.fab.fa-dribbble
+              %li
+                %a.pin{:href => "#"}
+                  %i.fab.fa-pinterest-p
+      #home.header_top
+        %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+          %button.navbar-toggler.navbar-toggler-right.mx-auto{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+            %span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+            %ul.navbar-nav.mr-auto
+              %li.nav-item.active
+                %a.nav-link{:href => "index.html"}
+                  Home
+                  %span.sr-only (current)
+              %li.nav-item
+                %a.nav-link{:href => "about.html"} About
+              %li.nav-item.dropdown
+                %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  Features
+                .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+                  %a.dropdown-item{:href => "#"}
+                  %a.dropdown-item{:href => "blog1.html"} Standard Blog
+                  .dropdown-divider
+                  %a.dropdown-item{:href => "blog2.html"} 2 Column Blog
+                  .dropdown-divider
+                  %a.dropdown-item{:href => "blog3.html"} 3 Column Blog
+              %li.nav-item
+                %a.nav-link{:href => "contact.html"} Contact
+            %form.form-inline.my-2.my-lg-0.header-search{:action => "#", :method => "post"}
+              %input.form-control.mr-sm-2{:name => "Search", :placeholder => "Search here...", :required => "", :type => "search"}/
+              %button.btn.btn1.my-2.my-sm-0{:type => "submit"}
+                %i.fa.fa-search
+    / //header
+    .banner-inner
+    %ol.breadcrumb
+      %li.breadcrumb-item
+        %a{:href => "index.html"} Home
+      %li.breadcrumb-item.active Single
+    / //banner
+    %section.banner-bottom
+      / /blog
+      .container
+        .row
+          / left
+          .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+            .blog-grid-top
+              .b-grid-top
+                .blog_info_left_grid
+                  %a{:href => "single.html"}
+                    %img.img-fluid{:alt => "", :src => "assets/img/b1.jpg"}/
+                .blog-info-middle
+                  %ul
+                    %li
+                      %a{:href => "#"}
+                        %i.far.fa-calendar-alt
+                        FEB 15,2018
+                    %li.mx-2
+                      %a{:href => "#"}
+                        %i.far.fa-thumbs-up
+                        201 Likes
+                    %li
+                      %a{:href => "#"}
+                        %i.far.fa-comment
+                        15 Comments
+              %h3
+                %a{:href => "single.html"} Amet consectetur adipisicing
+              %p
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+                aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
+                aute irudre dolor in elit sed uta labore dolore reprehender
+              %a.btn.btn-primary.read-m{:href => "single.html"} Read More
+            .comment-top
+              %h4 Comments
+              .media
+                %img.img-fluid{:alt => "", :src => "assets/img/t1.jpg"}/
+                .media-body
+                  %h5.mt-0 Joseph Goh
+                  %p
+                    Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros.
+                    Cras a ornare elit.
+                  .media.mt-3
+                    %a.d-flex.pr-3{:href => "#"}
+                      %img.img-fluid{:alt => "", :src => "assets/img/t2.jpg"}/
+                    .media-body
+                      %h5.mt-0 Richard Spark
+                      %p
+                        Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros.
+                        Cras a ornare elit.
+            .comment-top
+              %h4 Leave a Comment
+              .comment-bottom
+                %form{:action => "#", :method => "post"}
+                  %input.form-control{:name => "Name", :placeholder => "Name", :required => "", :type => "text"}/
+                  %input.form-control{:name => "Email", :placeholder => "Email", :required => "", :type => "email"}/
+                  %input.form-control{:name => "Subject", :placeholder => "Subject", :required => "", :type => "text"}/
+                  %textarea.form-control{:name => "Message", :placeholder => "Message...", :required => ""}
+                  %button.btn.btn-primary.submit{:type => "submit"} Submit
+          / //left
+          / right
+          %aside.col-lg-4.agileits-w3ls-right-blog-con.text-right
+            .right-blog-info.text-left
+              .tech-btm
+                %img.img-fluid{:alt => "", :src => "assets/img/banner1.jpg"}/
+              .tech-btm
+                %h4 Sign up to our newsletter
+                %p Pellentesque dui, non felis. Maecenas male
+                %form{:action => "#", :method => "post"}
+                  %input{:placeholder => "Email", :required => "", :type => "email"}/
+                  %input{:type => "submit", :value => "Subscribe"}/
+              .tech-btm
+                %h4 Categories
+                %ul.list-group.single
+                  %li.list-group-item.d-flex.justify-content-between.align-items-center
+                    Cras justo odio
+                    %span.badge.badge-primary.badge-pill 14
+                  %li.list-group-item.d-flex.justify-content-between.align-items-center
+                    Dapibus ac facilisis in
+                    %span.badge.badge-primary.badge-pill 2
+                  %li.list-group-item.d-flex.justify-content-between.align-items-center
+                    Morbi leo risus
+                    %span.badge.badge-primary.badge-pill 1
+              .tech-btm
+                %h4 Top stories of the week
+                .blog-grids.row.mb-3
+                  .col-md-5.blog-grid-left
+                    %a{:href => "single.html"}
+                      %img.img-fluid{:alt => "", :src => "assets/img/1.jpg"}/
+                  .col-md-7.blog-grid-right
+                    %h5
+                      %a{:href => "single.html"} Pellentesque dui, non felis. Maecenas male non felis
+                    .sub-meta
+                      %span
+                        %i.far.fa-clock
+                        20 Jan, 2018
+                .blog-grids.row.mb-3
+                  .col-md-5.blog-grid-left
+                    %a{:href => "single.html"}
+                      %img.img-fluid{:alt => "", :src => "assets/img/6.jpg"}/
+                  .col-md-7.blog-grid-right
+                    %h5
+                      %a{:href => "single.html"} Pellentesque dui, non felis. Maecenas male non felis
+                    .sub-meta
+                      %span
+                        %i.far.fa-clock
+                        20 Feb, 2018
+              .single-gd.my-5.tech-btm
+                %h4 Our Progress
+                .progress
+                  .progress-bar.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "10", :role => "progressbar", :style => "width: 10%"}
+                .progress
+                  .progress-bar.progress-bar-striped.bg-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "25", :role => "progressbar", :style => "width: 25%"}
+                .progress
+                  .progress-bar.progress-bar-striped.bg-info{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "50", :role => "progressbar", :style => "width: 50%"}
+                .progress
+                  .progress-bar.progress-bar-striped.bg-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "75", :role => "progressbar", :style => "width: 75%"}
+                .progress
+                  .progress-bar.progress-bar-striped.bg-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "100", :role => "progressbar", :style => "width: 100%"}
+              .single-gd.tech-btm
+                %h4 Recent Post
+                .blog-grids
+                  .blog-grid-left
+                    %a{:href => "single.html"}
+                      %img.img-fluid{:alt => "", :src => "assets/img/b1.jpg"}/
+                  .blog-grid-right
+                    %h5
+                      %a{:href => "single.html"} Pellentesque dui, non felis. Maecenas male
+                  .clearfix
+          / //right
+    / //main
+    / footer
+    %footer
+      .container
+        .row
+          .col-lg-4.footer-grid-agileits-w3ls.text-left
+            %h3 About US
+            %p Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..
+            .read
+              %a.btn.btn-primary.read-m{:href => "single.html"} Read More
+          .col-lg-4.footer-grid-agileits-w3ls.text-left
+            .tech-btm
+              %h3 Latest Posts
+              .blog-grids.row.mb-3
+                .col-md-5.blog-grid-left
+                  %a{:href => "single.html"}
+                    %img.img-fluid{:alt => "", :src => "assets/img/4.jpg"}/
+                .col-md-7.blog-grid-right
+                  %h5
+                    %a{:href => "single.html"} Pellentesque dui, non felis. Maecenas male non felis
+                  .sub-meta
+                    %span
+                      %i.far.fa-clock
+                      20 Jan, 2018
+              .blog-grids.row.mb-3
+                .col-md-5.blog-grid-left
+                  %a{:href => "single.html"}
+                    %img.img-fluid{:alt => "", :src => "assets/img/5.jpg"}/
+                .col-md-7.blog-grid-right
+                  %h5
+                    %a{:href => "single.html"} Pellentesque dui, non felis. Maecenas male non felis
+                  .sub-meta
+                    %span
+                      %i.far.fa-clock
+                      20 Jan, 2018
+              .blog-grids.row.mb-3
+                .col-md-5.blog-grid-left
+                  %a{:href => "single.html"}
+                    %img.img-fluid{:alt => "", :src => "assets/img/6.jpg"}/
+                .col-md-7.blog-grid-right
+                  %h5
+                    %a{:href => "single.html"} Pellentesque dui, non felis. Maecenas male non felis
+                  .sub-meta
+                    %span
+                      %i.far.fa-clock
+                      20 Jan, 2018
+          / subscribe
+          s
+          .col-lg-4.subscribe-main.footer-grid-agileits-w3ls.text-left
+            %h2 Signup to our newsletter
+            .subscribe-main.text-left
+              .subscribe-form
+                %form.subscribe_form{:action => "#", :method => "post"}
+                  %input.form-control{:placeholder => "Enter your email...", :required => "", :type => "email"}/
+                  %button.btn.btn-primary.submit{:type => "submit"} Submit
+              %p We respect your privacy.No spam ever!
+            / //subscribe
+        / footer
+        .footer-cpy.text-center
+          .footer-social
+            .copyrighttop
+              %ul
+                %li.mx-3
+                  %a.facebook{:href => "#"}
+                    %i.fab.fa-facebook-f
+                    %span Facebook
+                %li
+                  %a.facebook{:href => "#"}
+                    %i.fab.fa-twitter
+                    %span Twitter
+                %li.mx-3
+                  %a.facebook{:href => "#"}
+                    %i.fab.fa-google-plus-g
+                    %span Google+
+                %li
+                  %a.facebook{:href => "#"}
+                    %i.fab.fa-pinterest-p
+                    %span Pinterest
+          .w3layouts-agile-copyrightbottom
+            %p
+              © 2018 Weblog. All Rights Reserved | Design by
+              %a{:href => "http://w3layouts.com/"} W3layouts
+        / //footer
+    /
+    / js
+    %script{:src => "assets/js/jquery-2.2.3.min.js"}
+    / //js
+    / / start-smoth-scrolling
+    %script{:src => "assets/js/move-top.js"}
+    %script{:src => "assets/js/easing.js"}
+    :javascript
+      jQuery(document).ready(function ($) {
+      	$(".scroll").click(function (event) {
+      		event.preventDefault();
+      		$('html,body').animate({
+      			scrollTop: $(this.hash).offset().top
+      		}, 900);
+      	});
+      });
+    / // end-smoth-scrolling
+    :javascript
+      $(document).ready(function () {
+      	/*
+      							var defaults = {
+      					  			containerID: 'toTop', // fading element id
+      								containerHoverID: 'toTopHover', // fading element hover id
+      								scrollSpeed: 1200,
+      								easingType: 'linear'
+      					 		};
+      							*/
+
+      	$().UItoTop({
+      		easingType: 'easeOutQuart'
+      	});
+
+      });
+    %a#toTop.scroll{:href => "#home", :style => "display: block;"}
+      %span#toTopHover{:style => "opacity: 1;"}
+    / //Custom-JavaScript-File-Links
+    %script{:src => "assets/js/bootstrap.js"}

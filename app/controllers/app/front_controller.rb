@@ -15,7 +15,7 @@ module App
     end
 
     def censo
-      @censos = Censo.new
+      @censos = Censu.new
     end
   end
 end

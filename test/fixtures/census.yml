@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  last_name: MyString
+  calle: MyString
+  casa: MyString
+  piso: MyString
+  edad: MyString
+  sector: MyString
+  birthdate: 2018-06-22
+  profesion: MyString
+  nivel_estudio: MyString
+  position: 1
+
+two:
+  name: MyString
+  last_name: MyString
+  calle: MyString
+  casa: MyString
+  piso: MyString
+  edad: MyString
+  sector: MyString
+  birthdate: 2018-06-22
+  profesion: MyString
+  nivel_estudio: MyString
+  position: 1

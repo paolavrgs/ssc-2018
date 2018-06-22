@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_10_034621) do
+ActiveRecord::Schema.define(version: 2018_06_22_145545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,25 +42,21 @@ ActiveRecord::Schema.define(version: 2018_05_10_034621) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "censos", force: :cascade do |t|
+  create_table "census", force: :cascade do |t|
+    t.string "name"
+    t.string "last_name"
     t.string "calle"
     t.string "casa"
-    t.integer "status_vivienda"
-    t.integer "tipo_vivienda"
-    t.integer "condicion_v"
-    t.integer "piso"
-    t.string "name"
-    t.string "dni"
+    t.string "piso"
+    t.string "edad"
+    t.string "sector"
     t.date "birthdate"
-    t.string "age"
-    t.integer "gender"
-    t.string "phone"
-    t.boolean "job"
-    t.string "job_place"
-    t.boolean "student"
+    t.string "profesion"
+    t.string "nivel_estudio"
+    t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "position"
+    t.boolean "jefe_familia"
   end
 
   create_table "customizes", force: :cascade do |t|

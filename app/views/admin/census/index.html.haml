@@ -1,0 +1,85 @@
+#index-container{ :controller => "census" }
+  .container
+    .row
+      .listing.col-lg-12.col-xs-12
+        %section.content-header.index-header
+          %h1{ style: 'display: inline-block' }
+            = t("keppler.modules.#{controller_path.underscore}")
+          = entries(@total, @objects)
+          .toolbar
+            - if Pundit.policy(current_user, Censu).download?
+              .toolbar-item
+                = link_to admin_censu_download_path(Censu, :format => :xls), class: "tool-btn", title: t('keppler.actions.download_records') do
+                  %i.icon-cloud-download
+            - if Pundit.policy(current_user, Censu).import?
+              .toolbar-item
+                = link_to "", class: "tool-btn", title: t('keppler.actions.upload_records'), id: "censu" do
+                  %i.icon-cloud-upload
+            .toolbar-item
+              = link_to reload_admin_census_path, class: "tool-btn", remote: true do
+                %i.icon-reload
+            - if Pundit.policy(current_user, Censu).destroy_multiple?
+              .toolbar-item
+                .checkbox
+                  %label{ for: 'checkbox-all' }
+                    %input{ type: 'checkbox', id: 'checkbox-all', ':disabled' => 'checkItems ? disabled : ""', '@click' => 'selectAll()' }
+                    %span.cr
+                      %i.cr-icon.glyphicon.glyphicon-ok
+            .toolbar-item
+              %a.tool-btn{"data-confirm" => "¿Estás seguro?", "data-method" => "delete", "v-bind:href" => "link", :rel => "nofollow", ":class" => "{disabled: !checks}" }
+                %i.icon-trash
+          .hide
+            = form_tag admin_censu_import_path(@objects), id: "import_form_census", multipart: true, method: :post do
+              = file_field_tag :file, id: "import_file_censu"
+          %ol.breadcrumb
+            %li
+              %a{ href: '#' }
+                %i.icon-directions
+                = t("keppler.modules.#{action_name.underscore}")
+
+        .box.slice-box
+          .box-body.no-padding
+
+            %table.table
+              %thead
+                - if @objects.size.zero?
+                  %tr
+                    %th{style: 'text-align: center;'}
+                      %h6= t('keppler.messages.not_found_records', model:  t("keppler.models.pluralize.census"))
+                - else
+                  %tr
+                    %th
+                    %th.hidden-xs= t('activerecord.attributes.name')
+                    %th.hidden-xs= t('activerecord.attributes.last_name')
+                    %th.hidden-xs.hidden-sm= t('activerecord.attributes.calle')
+                    %th.hidden-xs.hidden-sm= t('activerecord.attributes.casa')
+                    %th.hidden-xs.hidden-sm= t('activerecord.attributes.piso')
+                    %th.hidden-xs.hidden-sm= t('activerecord.attributes.edad')
+                    %th.center Menu
+                    %th
+              %tbody#objects-container{ "data-update-url" => "#{sort_admin_census_path}" }
+                = render 'admin/layouts/listing_preloader'
+                = render 'listing', objects: @census
+        %center#paginator-module
+          = paginate @objects, window: 1
+  %aside.control-sidebar
+    = render "description"
+  %aside#index-show.control-sidebar
+
+  -# .mixed-btn
+  -#   - if Pundit.policy(current_user, Censu).create?
+  -#     = link_to new_admin_censu_path, class: "btn-float" do
+  -#       +
+
+:javascript
+  $(document).ready(function(){
+    $('#censu').click(function() {
+      $('#import_file_censu').click()
+      $('#import_file_censu').change(function() {
+        $('.waiting').css('display', 'block')
+        $('#import_form_censu').submit()
+      })
+    });
+
+    renderImg();
+  });
