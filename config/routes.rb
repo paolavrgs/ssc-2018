@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get '/contact', to: 'app/front#contact', as: :app_contact
     get '/thanks', to: 'app/front#thanks', as: :app_thanks
     get '/censo', to: 'app/front#censo', as: :app_censo
+    get '/censoexitoso/:id', to: 'app/front#censoexitoso', as: :app_censoexito
   end
 
   root to: 'app/front#index'

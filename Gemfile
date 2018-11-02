@@ -113,7 +113,7 @@ end
 gem 'recaptcha', require: "recaptcha/rails"
 
 #contact_us keppler
-gem 'keppler_contact_us', path: 'plugins/keppler_contact_us'
+# gem 'keppler_contact_us', path: 'plugins/keppler_contact_us'
 
 #---- keppler_ga_dashboard ----
 gem 'google-api-client', '~> 0.7.1'

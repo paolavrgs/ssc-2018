@@ -1,6 +1,7 @@
 module Admin
   # MessagesController
   class MessagesController < AdminController
+    before_action :authenticate_user!, except: %i[new create]
     before_action :show_history, only: [:index]
     before_action :set_message, only: [:show, :edit, :update, :destroy]
 
@@ -25,26 +26,30 @@ module Admin
     end
 
     # GET /messages/new
-    # def new
-    #   @message = Message.new
-    #   authorize @message
-    # end
+    def new
+      @message = Message.new
+      authorize @message
+    end
 
     # GET /messages/1/edit
-    # def edit
-    #   authorize @message
-    # end
+    def edit
+      authorize @message
+    end
 
     # POST /messages
     def create
       @message = Message.new(message_params)
       # if verify_recaptcha(model: @message, timeout: 10, message: "Oh! It's error with reCAPTCHA!") and @message.save
-      @message.save
-        # ContactMailer.contact(@message).deliver_now
+      if @message.save
         redirect_to "/es/thanks"
+      else
+        redirect_to root_path, notice: 'error'
+      end
+        # ContactMailer.contact(@message).deliver_now
       # else
       #   redirect_to "/", notice: 'no enviado'
       # end
+      authorize @message
     end
 
     # DELETE /messages/1

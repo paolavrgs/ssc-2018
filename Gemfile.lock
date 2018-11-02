@@ -1,13 +1,4 @@
 PATH
-  remote: plugins/keppler_contact_us
-  specs:
-    keppler_contact_us (0.0.1)
-      haml_rails
-      pundit
-      rails (~> 5.2.0)
-      simple_form
-
-PATH
   remote: plugins/keppler_ga_dashboard
   specs:
     keppler_ga_dashboard (0.0.1)
@@ -177,7 +168,6 @@ GEM
       rake (>= 10, < 13)
       rubocop (>= 0.50.0)
       sysexits (~> 1.1)
-    haml_rails (0.1.0)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -436,7 +426,6 @@ DEPENDENCIES
   jquery-ui-rails (= 6.0.1)
   kaminari (~> 1.1, >= 1.1.1)
   kaminari-i18n (= 0.5.0)
-  keppler_contact_us!
   keppler_ga_dashboard!
   mini_magick
   nprogress-rails (= 0.2.0.2)
@@ -473,4 +462,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

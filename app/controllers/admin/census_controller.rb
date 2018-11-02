@@ -1,6 +1,7 @@
 module Admin
   # CensusController
   class CensusController < AdminController
+    before_action :authenticate_user!, except: %i[new create]
     before_action :set_censu, only: [:show, :edit, :update, :destroy]
     before_action :show_history, only: [:index]
     before_action :set_attachments
@@ -38,7 +39,7 @@ module Admin
 
       if @censu.save
         # redirect(@censu, params)
-        redirect_to app_censo_path
+        redirect_to app_censoexito_es_path(@censu.id)
       else
         render :new
       end

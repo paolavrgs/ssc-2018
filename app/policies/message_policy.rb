@@ -7,4 +7,11 @@ class MessagePolicy < ControllerPolicy
     @objects = objects
   end
 
+  def new?
+    true
+  end
+
+  def create?
+    true
+  end
 end

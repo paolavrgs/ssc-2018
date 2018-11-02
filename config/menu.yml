@@ -1,10 +1,10 @@
 menu:
-  # dashboard:
-  #   name: dashboard
-  #   url_path: /admin
-  #   icon: pie-chart
-  #   current: ['admin/dashboard']
-  #   model: Dashboard
+  dashboard:
+    name: dashboard
+    url_path: /admin
+    icon: pie-chart
+    current: ['admin/dashboard']
+    model: Dashboard
   # script:
   #   name: scripts
   #   url_path: /admin/scripts
@@ -33,6 +33,12 @@ menu:
     icon: people
     current: ['admin/census']
     model: Censu
+  message:
+    name: mensajes
+    url_path: /admin/messages
+    icon: people
+    current: ['admin/messages']
+    model: Message
   # censo:
   #   name: censo
   #   url_path: /admin/censos

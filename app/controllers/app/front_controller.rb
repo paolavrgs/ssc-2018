@@ -14,6 +14,10 @@ module App
     def thanks
     end
 
+    def censoexitoso
+      @censo = Censu.find(params[:id])
+    end
+
     def censo
       @censos = Censu.new
     end
