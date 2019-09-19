@@ -19,58 +19,38 @@
           .col-xs-12
             .table-responsive
               %table.table.table-bordered.table-hover{summary: "This table shows how to create responsive tables using Bootstrap's default functionality"}
-                %caption.text-center
-                  An example of a responsive table based on
-                  = succeed ":" do
-                    %a{href: "https://getbootstrap.com/css/#tables-responsive", target: "_blank"} Bootstrap
+                -# %caption.text-center
+                -#   An example of a responsive table based on
+                -#   = succeed ":" do
+                -#     %a{href: "https://getbootstrap.com/css/#tables-responsive", target: "_blank"} Bootstrap
                 %thead
                   %tr
                     %th Nombre
                     %th Apellido
                     %th Fecha de Nacimiento
-                    %th Median Age
-                    %th Area (Km²)
+                    %th Edad
+                    %th Profesión
+                    %th Nivel de Estudio
+                    %th Sector
+                    %th Piso
+                    %th Calle
+                    %th Casa
                 %tbody
                   %tr
                     %td= @censo.name
                     %td= @censo.last_name
                     %td= @censo.birthdate
-                    %td 31.3
-                    %td 2,780,387
-                  %tr
-                    %td Australia
-                    %td English 79%, native and other languages
-                    %td 23,630,169
-                    %td 37.3
-                    %td 7,739,983
-                  %tr
-                    %td Greece
-                    %td Greek 99% (official), English, French
-                    %td 11,128,404
-                    %td 43.2
-                    %td 131,956
-                  %tr
-                    %td Luxembourg
-                    %td Luxermbourgish (national) French, German (both administrative)
-                    %td 536,761
-                    %td 39.1
-                    %td 2,586
-                  %tr
-                    %td Russia
-                    %td Russian, others
-                    %td 142,467,651
-                    %td 38.4
-                    %td 17,076,310
-                  %tr
-                    %td Sweden
-                    %td Swedish, small Sami- and Finnish-speaking minorities
-                    %td 9,631,261
-                    %td 41.1
-                    %td 449,954
-                %tfoot
-                  %tr
-                    %td.text-center{colspan: "5"}
-                      %a{href: "http://www.infoplease.com/ipa/A0855611.html", target: "_blank"} Descargar
+                    %td= @censo.edad
+                    %td= @censo.profesion
+                    %td= @censo.nivel_estudio
+                    %td= @censo.sector
+                    %td= @censo.piso
+                    %td= @censo.calle
+                    %td= @censo.casa
+                -# %tfoot
+                -#   %tr
+                -#     %td.text-center{colspan: "10"}
+                -#       %a{href: "http://www.infoplease.com/ipa/A0855611.html", target: "_blank"} Descargar
     / footer
     %footer
       .container

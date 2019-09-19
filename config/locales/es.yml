@@ -5,6 +5,7 @@ es:
     navigation:
       last_session: Ultima sesión
     sidebar-menu:
+      banners: Banners
       census: Census
       messages: Buzón (Quejas y Sugerencias)
       downloads: Descargas
@@ -41,6 +42,7 @@ es:
         categories: Categorías
     models:
       singularize:
+        banner: banner
         censu: censu
         message: message
         download: download
@@ -51,6 +53,7 @@ es:
         configuration: configuración
         user: usuario
       pluralize:
+        banners: banners
         census: census
         messages: messages
         downloads: downloads
@@ -62,6 +65,7 @@ es:
         user: usuarios
         script: scripts
     modules:
+      admin/banners: Banners
       admin/census: Census
       admin/messages: Messages
       admin/downloads: Descargas de Documentos

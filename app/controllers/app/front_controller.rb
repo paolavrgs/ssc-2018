@@ -5,6 +5,10 @@ module App
 
     def index
       @downloads = Download.all
+      @banners = Banner.all
+    end
+
+    def about
     end
 
     def contact
@@ -12,6 +16,7 @@ module App
     end
 
     def thanks
+      @message = Message.find(params[:id])
     end
 
     def censoexitoso

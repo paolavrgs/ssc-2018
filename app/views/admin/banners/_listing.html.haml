@@ -1,0 +1,45 @@
+- objects.each do |banner|
+  %tr{ id: "row-#{banner.id}" }
+    %td.item-check{ style: 'width: 10%' }
+      - if Pundit.policy(current_user, Banner).destroy_multiple?
+        .checkbox
+          %label{ for: "checkbox-#{banner.id}" }
+            %input{ type:"checkbox", id: "checkbox-#{banner.id}", 'checklist-model' => 'check', 'checklist-value' => "#{banner.id}", '@click' => "listDelete(#{banner.id})"}
+            %span.cr
+              %i.cr-icon.glyphicon.glyphicon-ok
+    %td
+      = link_to admin_banner_path(banner, search: @query), remote: true, class: 'show-row' do
+        %span
+          %img{src: banner.banner}
+    %td.hidden-xs
+      = link_to admin_banner_path(banner, search: @query), remote: true, class: 'show-row' do
+        %span
+          = banner.title
+    %td{ style: 'width: 15px;padding-right:15px;' }
+      %a.action-btn.pull-right{:id => "menu-#{banner.id}", "aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
+        %i.icon-options-vertical
+      %ul.actions.dropdown-menu{"aria-labelledby" => "menu-#{banner.id}" }
+        - if Pundit.policy(current_user, Banner).show?
+          %li
+            = link_to admin_banner_path(banner), class: 'new-menu', title: t('keppler.actions.show') do
+              %i.icon-eye
+              = t('keppler.actions.show')
+        - if Pundit.policy(current_user, Banner).update?
+          %li
+            = link_to edit_admin_banner_path(banner), class: 'new-menu', title: t('keppler.actions.edit') do
+              %i.icon-pencil
+              = t('keppler.actions.edit')
+        - if Pundit.policy(current_user, Banner).clone?
+          %li
+            = link_to admin_banner_clone_path(banner), class: 'new-menu', title: t('keppler.actions.clone') do
+              %i.icon-docs
+              = t('keppler.actions.clone')
+        - if Pundit.policy(current_user, Banner).destroy?
+          %li
+            = link_to admin_banner_path(banner), class: 'new-menu', title: t('keppler.actions.delete'), method: :delete, data: { confirm: t("keppler.messages.data_confirm") } do
+              %i.icon-trash
+              = t('keppler.actions.delete')
+
+    %td{:style => 'width: 5%;'}
+      %a.drop{:href=>"#"}
+        %i.icon-cursor-move

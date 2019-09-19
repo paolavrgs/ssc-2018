@@ -2,6 +2,7 @@ en:
   keppler:
     login_message: Sign in to start your session
     sidebar-menu:
+      banners: Banners
       census: Census
       messages: Messages
       downloads: Downloads
@@ -29,6 +30,7 @@ en:
         categories: Categories
     models:
       singularize:
+        banner: banner
         censu: censu
         message: message
         download: download
@@ -39,6 +41,7 @@ en:
         configuration: configuration
         user: user
       pluralize:
+        banners: banners
         census: census
         messages: messages
         downloads: downloads
@@ -49,6 +52,7 @@ en:
         configurations: configurations
         user: users
     modules:
+      admin/banners: Banners
       admin/census: Census
       admin/messages: Messages
       admin/downloads: Downloads

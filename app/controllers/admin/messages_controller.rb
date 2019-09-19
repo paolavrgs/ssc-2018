@@ -41,7 +41,7 @@ module Admin
       @message = Message.new(message_params)
       # if verify_recaptcha(model: @message, timeout: 10, message: "Oh! It's error with reCAPTCHA!") and @message.save
       if @message.save
-        redirect_to "/es/thanks"
+        redirect_to app_thanks_es_path(@message.id)
       else
         redirect_to root_path, notice: 'error'
       end

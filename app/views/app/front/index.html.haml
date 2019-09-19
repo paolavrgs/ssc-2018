@@ -7,37 +7,40 @@
     .banner
       #carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
         %ol.carousel-indicators
-          %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
-          %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
-          %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
-          %li{"data-slide-to" => "3", "data-target" => "#carouselExampleIndicators"}
+          - @banners.each_with_index do |x, banner|
+            %li.active{"data-slide-to" => "x", "data-target" => "#carouselExampleIndicators"}
+          -# %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+          -# %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+          -# %li{"data-slide-to" => "3", "data-target" => "#carouselExampleIndicators"}
         .carousel-inner{:role => "listbox"}
-          .carousel-item.active
-            .carousel-caption
-              %h3 Conoce nuestro consejo comunal
-              .read
-                %a.btn.btn-primary.read-m{:href => "single.html"} Ver más
-          .carousel-item.item2
-            .carousel-caption
-              %h3 Mantente al día
-              .read
-                %a.btn.btn-primary.read-m{:href => "single.html"} Ver más
-          .carousel-item.item3
-            .carousel-caption
-              %h3 Texto de prueba 1
-              .read
-                %a.btn.btn-primary.read-m{:href => "single.html"} Ver más
-          .carousel-item.item4
-            .carousel-caption
-              %h3 Texto de prueba 2
-              .read
-                %a.btn.btn-primary.read-m{:href => "single.html"} Leer más
-        %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
-          %span.carousel-control-prev-icon{"aria-hidden" => "true"}
-          %span.sr-only Previous
-        %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
-          %span.carousel-control-next-icon{"aria-hidden" => "true"}
-          %span.sr-only Next
+          - @banners.each do |banner|
+            .carousel-item.active{style:"background: linear-gradient(rgba(23, 22, 23, 0.6), rgba(23, 22, 23, 0.6)), url(#{banner.banner}) no-repeat;background-size:cover;"}
+              .carousel-caption
+                %h3= banner.title
+                %p= banner.description
+                -# .read
+                  %a.btn.btn-primary.read-m{:href => "single.html"} Ver más
+          -# .carousel-item.item2
+          -#   .carousel-caption
+          -#     %h3 Mantente al día
+          -#     .read
+          -#       %a.btn.btn-primary.read-m{:href => "single.html"} Ver más
+          -# .carousel-item.item3
+          -#   .carousel-caption
+          -#     %h3 Texto de prueba 1
+          -#     .read
+          -#       %a.btn.btn-primary.read-m{:href => "single.html"} Ver más
+          -# .carousel-item.item4
+          -#   .carousel-caption
+          -#     %h3 Texto de prueba 2
+          -#     .read
+          -#       %a.btn.btn-primary.read-m{:href => "single.html"} Leer más
+        -# %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
+        -#   %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+        -#   %span.sr-only Previous
+        -# %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
+        -#   %span.carousel-control-next-icon{"aria-hidden" => "true"}
+        -#   %span.sr-only Next
     / //banner
     -# %section.bottom-slider
     -#   .course_demo1
@@ -79,21 +82,20 @@
               .b-grid-top
                 .blog_info_left_grid
                   %a{:href => "single.html"}
-                    %img.img-fluid{:alt => "", :src => "assets/img/b1.jpg"}/
+                    %img.img-fluid{:alt => "", :src => "assets/img/Danzas-630x330.jpg"}/
                 .blog-info-middle
                   %ul
                     %li
                       %a{:href => "#"}
                         %i.fa.fa-calendar-alt
-                        FEB 15,2018
+                        Mayo 15,2018
               %h3
-                %a{:href => "single.html"} Amet consectetur adipisicing
+                %a{:href => "single.html"} Danzas Araguaney, orgullo de Las Margaritas
               %p
-                Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
-                aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
-                aute irudre dolor in elit sed uta labore dolore reprehender
-              %a.btn.btn-primary.read-m{:href => "single.html"} Leer más
-            .blog-girds-sec
+                UN ESPACIO DEDICADO AL TALENTO ARTISTICO QUE HACE VIDA CULTURAL EN LA URB. LAS MARGARITAS, EN EL AREA DE LA DANZA
+                Danzas Araguaney sigue regalándole su talento a las miles de personas que continuamente evidencian sus presentaciones, y formando a sus integrantes, no solo con prácticas de danza, sino también con la enseñanza teórica de las diversas manifestaciones artísticas y culturales propias de Venezuela. 
+              %a.btn.btn-primary.read-m{:href => "http://danzas-araguaney.blogspot.com/", target:"blank"} Ver blog
+            -# .blog-girds-sec
               .row
                 .col-md-6.blog-grid-top
                   .b-grid-top
@@ -108,7 +110,7 @@
                       %a{:href => "#"}
                         %i.fa.fa-clock
                         5 meses
-                .col-md-6.blog-grid-top
+                -# .col-md-6.blog-grid-top
                   .b-grid-top
                     .blog_info_left_grid
                       %a{:href => "single.html"}
@@ -123,13 +125,13 @@
                         5 meses
           %aside.col-lg-4.agileits-w3ls-right-blog-con.text-right
             .tech-btm
-              %h4 Descargas
+              %h3{style:'margin-bottom:50px;'} Descarga de Formatos
               .blog-grids.row.mb-3
                 -# .col-md-5.blog-grid-left
                 -#   %a{:href => "single.html"}
                 -#     %img.img-fluid{:alt => "", :src => "assets/img/1.jpg"}/
                 - @downloads.each do |doc|
-                  .col-md-12.blog-grid-right
+                  .col-md-12.blog-grid-right{style:"    border: 1px solid #c0c0c0;padding: 10px;"}
                     %h5
                       %a{:href => "#{doc.file}"}
                         %i.fa.fa-download

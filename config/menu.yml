@@ -39,12 +39,12 @@ menu:
     icon: people
     current: ['admin/messages']
     model: Message
-  # censo:
-  #   name: censo
-  #   url_path: /admin/censos
-  #   icon: people
-  #   current: ['admin/censos']
-  #   model: Censo
+  banner:
+    name: banners
+    url_path: /admin/banners
+    icon: picture
+    current: ['admin/banners']
+    model: Banner
   # user:
   #   name: users
   #   url_path: /admin/users

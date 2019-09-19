@@ -14,6 +14,29 @@
     = render 'app/partials/navbar'
     %section.main-content-w3layouts-agileits
       %h3.tittle Mensaje Enviado
+      .container
+        .row
+          .col-xs-12
+            .table-responsive
+              %table.table.table-bordered.table-hover{summary: "This table shows how to create responsive tables using Bootstrap's default functionality"}
+                -# %caption.text-center
+                -#   An example of a responsive table based on
+                -#   = succeed ":" do
+                -#     %a{href: "https://getbootstrap.com/css/#tables-responsive", target: "_blank"} Bootstrap
+                %thead
+                  %tr
+                    %th Nombre y Apellidos
+                    %th Cedula de Identidad
+                    %th Direccion
+                    %th Asunto
+                    %th Mensaje
+                %tbody
+                  %tr
+                    %td= @message.name
+                    %td= @message.dni
+                    %td= @message.address
+                    %td= @message.subject
+                    %td= @message.content
     / footer
     %footer
       .container
