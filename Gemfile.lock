@@ -258,7 +258,8 @@ GEM
       i18n (>= 0.5.0)
       railties (>= 3.0.0)
     public_suffix (3.0.2)
-    puma (3.11.4)
+    puma (4.3.1)
+      nio4r (~> 2.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.5)
@@ -432,7 +433,7 @@ DEPENDENCIES
   paranoia (= 2.4.1)
   pg (= 1.0.0)
   public_activity (= 1.5.0)
-  puma (~> 3.11, >= 3.11.3)
+  puma (~> 4.3)
   pundit (= 1.1.0)
   rails (= 5.2.0)
   rails-assets-adminlte!
