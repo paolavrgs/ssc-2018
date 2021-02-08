@@ -58,7 +58,7 @@ gem 'jquery-minicolors-rails', '~> 2.2', '>= 2.2.6.0'
 gem 'simple_form', '4.0.0'
 #
 # Upload
-gem 'carrierwave', '1.2.2'
+gem 'carrierwave', '2.1.1'
 gem 'rmagick', '2.16.0' # fix issue: 'sudo apt install libmagick++-dev'
 gem 'mini_magick'
 
